@@ -52,8 +52,7 @@ public class SocketAdapterImpl implements SocketAdapter {
             @Override
             public void run() {
                 try {
-                    socket.setSoTimeout(5000);
-					socket.connect(new InetSocketAddress(host, port), 5000);
+					socket.connect(new InetSocketAddress(host, port));
 					invokeOpenEventHandler();
 					submitReadTask();
 				} catch (IOException e) {
@@ -77,7 +76,7 @@ public class SocketAdapterImpl implements SocketAdapter {
     @Override
     public void close() throws IOException {
     	this.socket.close();
-    	this.invokeCloseEventHandler(false);
+        this.invokeCloseEventHandler(false);
     }
 
     @Override
