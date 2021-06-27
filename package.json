@@ -1,7 +1,10 @@
 {
-  "name": "cordova-plugin-socket-tcp",
+  "name": "cordova-plugin-gephenom-socket-tcp",
   "version": "1.7.1",
   "description": "This Cordova plugin provides JavaScript API, that allows you to communicate with server through TCP protocol. Currently we support these platforms: iOS, Android, WP8.",
+  "scripts": {
+    "publish": "npm publish --access public"
+  },
   "cordova": {
     "platforms": [
       "ios",
